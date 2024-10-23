@@ -8,6 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/app/styles/supabaseClient"; // Adjust the import path as needed
 import { Session, User } from '@supabase/supabase-js'; // Ensure User type is imported
 
+
+
 interface Customer {
   id: number;
   name: string;
@@ -31,6 +33,7 @@ export default function WaitlistApp() {
   const [user, setUser] = useState<User | null>(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
 
   // Check user session on component mount
   useEffect(() => {
